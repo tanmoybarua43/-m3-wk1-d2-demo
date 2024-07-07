@@ -8,7 +8,9 @@ app.get('/about', (req, res) => {
     res.send('About');
 });
 // For invalid routes
-
+app.get('*', (req, res) => {
+    res.send('404! Sorry, this is an invalid URL.');
+});
 
 app.listen(3000);
 

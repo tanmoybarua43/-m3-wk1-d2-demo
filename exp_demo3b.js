@@ -1,11 +1,9 @@
 var express = require('express');
 var app = express();
+var routerdemo = require('./exp_demo3a.js'); // Ensure the correct filename
 
+app.use('/routerdemo', routerdemo);
 
-
-//both exp-demo3a.js and exp-demo3b.js are in same directory
-
-
-app.listen(3000);
-
-
+app.listen(5001, () => {
+    console.log('Server is running on port 5001');
+});
